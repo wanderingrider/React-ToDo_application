@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./styles.css";
-import { InputTodo } from "./conponents/IndexTodo";
+import { InputTodo } from "./conponents/InputTodo";
 import { IncompleteTodos } from "./conponents/IncompleteTodos";
 import { CompleteTodos } from "./conponents/CompleteTodos";
 
@@ -18,11 +18,11 @@ export const App = () => {
     setTodoText("");
   };
 
-  const onClickDelete = (index) => {
+  function onClickDelete(index) {
     const newTodos = [...incomplteTodos];
     newTodos.splice(index, 1);
     setIncompleteTodos(newTodos);
-  };
+  }
 
   const onClickComplete = (index) => {
     const newIncompleteTodos = [...incomplteTodos];
